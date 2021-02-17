@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Roboto:wght@100&display=swap');
+
+:root {
+	--dark-cyan: hsl(185, 75%, 39%);
+	--very-dark-desaturated-blue: hsl(229, 23%, 23%);
+	--dark-grayish-blue: hsl(227, 10%, 46%);
+	--dark-gray: hsl(0, 0%, 59%);
+	--light-gray: hsl(0, 0%, 90%);
+
+	--name-and-stats-font-size: 1.125rem;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Kumbh Sans', sans-serif;
+	margin: 0;
+	background: url('./images/bg-pattern-top.svg') no-repeat right 50vw bottom
+			50vh,
+		url('./images/bg-pattern-bottom.svg') no-repeat left 50vw top 50vh;
+	background-color: var(--dark-cyan);
+}
+
+/* =========== CARDS ================ */
+.card-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 100vh;
+}
+
+/* should be 394px height */
+.card {
+	background-color: #fff;
+	border-radius: 0.825rem;
+	height: 24.5rem;
+	max-width: 87%;
+}
+
+/* should be 146px height */
+.card__header {
+	height: 9.25rem;
+}
+
+.card__title {
+	margin-top: 3.7rem;
+	margin-bottom: 0.4rem;
+}
+
+.card__title span {
+	margin-left: 10px;
+	color: var(--dark-gray);
+	font-weight: 400;
+}
+
+.card__subtitle {
+	color: var(--dark-gray);
+	margin-top: 0.5rem;
+}
+
+.card__header img {
+	width: 100%;
+	height: 100%;
+	border-top-right-radius: 0.825rem;
+	border-top-left-radius: 0.825rem;
+}
+
+/* card__body plus card__footer should be 245px height */
+/* card__body should be 151px height */
+.card__body {
+	padding-top: 1.1rem;
+	padding-bottom: 0.2rem;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card__body img {
+	border-radius: 50%;
+	position: absolute;
+	top: -49px;
+	border: 5px solid white;
+}
+
+.card hr {
+	margin: 0;
+}
+
+hr {
+	border-top: 1px solid var(--light-gray);
+}
+
+/* card__footer should be 94px height */
+.card__footer {
+	font-size: var(--name-and-stats-font-size);
+	display: flex;
+	justify-content: space-between;
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
+}
+
+.card__footer .stats {
+	text-align: center;
+}
+
+.card__footer .stats h3 {
+	margin-bottom: 0;
+}
+
+.card__footer .stats p {
+	margin-top: 0.5rem;
+	font-size: 0.75rem;
+	color: var(--dark-gray);
+}
